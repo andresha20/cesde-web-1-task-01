@@ -38,8 +38,7 @@ const resultsJSON = {
 }
 
 const getParsedValue = (field) => {
-    let value = JSON.parse(document.getElementById(field)?.value || "")
-    console.log(value)
+    let value = JSON.parse(document.getElementById(field)?.value || "1")
     return value;
 }
 
@@ -69,8 +68,6 @@ const handleClick = (e) => {
                     operation = parseInt(values[i].value);
                 }
             }
-            console.log(values)
-            console.log('op', operation)
             let numberOne = getParsedValue("numberOne");
             let numberTwo = getParsedValue("numberTwo");
             let result = 0;
